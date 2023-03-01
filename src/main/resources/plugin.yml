@@ -1,0 +1,6 @@
+name: ArmorSystem
+version: '${project.version}'
+main: me.frostingly.armorsystem.ArmorSystem
+api-version: 1.19
+authors: [ Frostingly ]
+description: NEW and IMPROVED armor system for RPG servers. Create hardcode and customizable armor sets!
