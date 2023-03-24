@@ -21,7 +21,7 @@ public class AnvilClick implements Listener {
     public void onAnvilClickEvent(PlayerInteractEvent e) {
         Player player = e.getPlayer();
         if (e.getClickedBlock() == null) return;
-        if (e.getClickedBlock().getType() == Material.ANVIL) {
+        if (e.getClickedBlock().getType() == Material.ANVIL || e.getClickedBlock().getType() == Material.CRAFTING_TABLE) {
             e.setCancelled(true);
             if (!plugin.getPlayerMenuUtilityMap().containsKey(player.getUniqueId())) {
                 plugin.getPlayerMenuUtilityMap().put(player.getUniqueId(), new PlayerMenuUtility(player));

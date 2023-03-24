@@ -204,6 +204,8 @@ public class CraftingMenu extends Menu implements Listener {
                                 highestAmount = highestAmountTwo;
                                 ItemStack clone = this.foundItemData.getItemStack().clone();
                                 clone.setAmount(clone.getAmount() * highestAmount);
+                                if (clone.getAmount() > clone.getMaxStackSize())
+                                    clone.setAmount(clone.getMaxStackSize());
                                 inventory.setItem(26, clone);
                             } else {
                                 correctMultipleSlots = 0;
